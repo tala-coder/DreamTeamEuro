@@ -2,4 +2,32 @@
     <string name="app_name">Dream Team Euro</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_team">PICK A TEAM</string>
+    <string name="squad_btn">VIEW SQUAD</string>
+    <string-array name="teams">
+        <item>Austria</item>
+        <item>Belgium</item>
+        <item>Croatia</item>
+        <item>Czech Republic</item>
+        <item>Denmark</item>
+        <item>England</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Hungary</item>
+        <item>Italy</item>
+        <item>Netherlands</item>
+        <item>North Macedonia</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+        <item>Russia</item>
+        <item>Scotland</item>
+        <item>Slovakia</item>
+        <item>Spain</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Turkey</item>
+        <item>Ukraine</item>
+        <item>Wales</item>
+    </string-array>
 </resources>

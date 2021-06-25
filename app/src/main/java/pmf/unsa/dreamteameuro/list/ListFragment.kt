@@ -14,8 +14,10 @@ class ListFragment : Fragment(){
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding = FragmentListBinding.inflate(inflater)
-
         setHasOptionsMenu(true)
+        val args = ListFragmentArgs.fromBundle(requireArguments())
+        binding.next.text = "Name: " + args.teamName
+        binding.teamid.text = "ID: " + args.teamId
         return binding.root
     }
 
