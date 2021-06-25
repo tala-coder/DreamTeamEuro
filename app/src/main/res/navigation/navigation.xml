@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="pmf.unsa.dreamteameuro.splash.SplashFragment"
+        android:label="Euro 2020"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="pmf.unsa.dreamteameuro.home.HomeFragment"
+        android:label="Euro 2020"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="pmf.unsa.dreamteameuro.list.ListFragment"
+        android:label="Euro 2020" />
+</navigation>
