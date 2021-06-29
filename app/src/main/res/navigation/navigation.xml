@@ -26,6 +26,7 @@
             android:id="@+id/action_homeFragment_to_listFragment"
             app:destination="@id/listFragment"
             app:enterAnim="@android:anim/slide_in_left"
+            app:launchSingleTop="false"
             app:popUpTo="@id/homeFragment"
             app:popUpToInclusive="false" />
         <action
@@ -39,7 +40,8 @@
         android:id="@+id/listFragment"
         android:name="pmf.unsa.dreamteameuro.list.ListFragment"
         android:label="Euro 2020"
-        tools:layout="@layout/fragment_list">
+        tools:layout="@layout/fragment_list"
+        >
         <argument
             android:name="teamName"
             app:argType="string" />
@@ -48,7 +50,8 @@
             app:argType="integer" />
         <action
             android:id="@+id/action_listFragment_to_aboutPlayer"
-            app:destination="@id/aboutPlayer" />
+            app:destination="@id/aboutPlayer"
+            app:popUpTo="@id/listFragment" />
     </fragment>
     <fragment
         android:id="@+id/idealTeam"

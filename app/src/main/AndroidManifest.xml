@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pmf.unsa.dreamteameuro">
+    package="pmf.unsa.dreamteameuro" >
 
     <application
         android:allowBackup="true"
@@ -8,8 +8,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DreamTeamEuro">
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.DreamTeamEuro" >
+        <activity
+            android:name=".activity.MainActivity2"
+            android:label="@string/title_activity_main2" >
+        </activity>
+        <activity
+            android:name=".MainActivity2"
+            android:label="@string/title_activity_main2" >
+        </activity>
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -36,5 +36,6 @@
     <string name="title_dashboard">Moj idealni tim</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_ideal_team">MY IDEAL TEAM</string>
 
 </resources>
