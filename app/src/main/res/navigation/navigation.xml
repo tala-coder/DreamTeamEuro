@@ -10,7 +10,6 @@
         android:name="pmf.unsa.dreamteameuro.splash.SplashFragment"
         android:label="Euro 2020"
         tools:layout="@layout/fragment_splash">
-
         <action
             android:id="@+id/action_splashFragment_to_homeFragment"
             app:destination="@id/homeFragment"
@@ -29,17 +28,38 @@
             app:enterAnim="@android:anim/slide_in_left"
             app:popUpTo="@id/homeFragment"
             app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_homeFragment_to_idealTeam"
+            app:destination="@id/idealTeam"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/homeFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/listFragment"
         android:name="pmf.unsa.dreamteameuro.list.ListFragment"
-        android:label="Euro 2020" >
+        android:label="Euro 2020"
+        tools:layout="@layout/fragment_list">
         <argument
             android:name="teamName"
             app:argType="string" />
         <argument
             android:name="teamId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_listFragment_to_aboutPlayer"
+            app:destination="@id/aboutPlayer" />
     </fragment>
+    <fragment
+        android:id="@+id/idealTeam"
+        android:name="pmf.unsa.dreamteameuro.idealTeam.IdealTeam"
+        android:label="My ideal team"
+        tools:layout="@layout/ideal_team_fragment" />
+    <fragment
+        android:id="@+id/aboutPlayer"
+        android:name="pmf.unsa.dreamteameuro.players.AboutPlayer"
+        android:label="about_player_fragment"
+        tools:layout="@layout/about_player_fragment" />
+
+
 </navigation>
