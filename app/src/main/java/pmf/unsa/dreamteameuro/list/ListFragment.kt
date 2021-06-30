@@ -15,15 +15,9 @@ class ListFragment : Fragment(){
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding = FragmentListBinding.inflate(inflater)
         setHasOptionsMenu(true)
-
-//        val adapter = ListAdapter()
-//        binding.recyclerviewListPlayers.adapter = adapter
-
         val args = ListFragmentArgs.fromBundle(requireArguments())
-//        binding.next.text = "Name: " + args.teamName
-//        binding.teamid.text = "ID: " + args.teamId
-        binding.textView2.text = "Name: " + args.teamName
-        binding.textView6.text = "ID: " + args.teamId
+        binding.next.text = "Name: " + args.teamName
+        binding.teamid.text = "ID: " + args.teamId
         return binding.root
     }
 
