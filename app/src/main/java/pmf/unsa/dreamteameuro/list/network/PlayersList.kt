@@ -1,5 +1,5 @@
 package pmf.unsa.dreamteameuro.list.network
 
 data class PlayersList (
-    val players: List<Object>
+    val players: List<Any>
         )
