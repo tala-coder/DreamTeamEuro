@@ -11,11 +11,13 @@ import retrofit2.Response
 
 class ListViewModel(private val repository: Repository): ViewModel() {
 
+  
     val myResponse: MutableLiveData<Response<PlayersListX>> = MutableLiveData()
 
     fun getPlayers(teamId: Int) {
         viewModelScope.launch {
             val response: Response<PlayersListX> = repository.getPlayers(teamId)
+
             myResponse.value = response
         }
     }

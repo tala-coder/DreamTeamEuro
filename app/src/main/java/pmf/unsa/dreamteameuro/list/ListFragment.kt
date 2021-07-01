@@ -1,5 +1,4 @@
 package pmf.unsa.dreamteameuro.list
-
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -23,10 +22,12 @@ class ListFragment : Fragment(){
     private lateinit var myRecView: RecyclerView
     private val ListAdapter by lazy { ListAdapter() }
 
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         args = ListFragmentArgs.fromBundle(requireArguments())
     }
+
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -52,7 +53,6 @@ class ListFragment : Fragment(){
 
         return binding.root
     }
-
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.options_menu, menu)
@@ -66,4 +66,6 @@ class ListFragment : Fragment(){
         myRecView.addItemDecoration(dividerItemDecoration)
     }
 
+
+    
 }

@@ -10,7 +10,8 @@ interface SofaApi {
         "x-rapidapi-key: 9f56abd52bmsh5d06c3a0587ea7cp1297b7jsnee15583cbce3",
         "x-rapidapi-host: sofascore.p.rapidapi.com"
     )
-    @GET("/teams/get-squad")
+
+  @GET("/teams/get-squad")
     suspend fun getPlayers(
             @Query("teamId")teamId: Int
     ): Response<PlayersListX>

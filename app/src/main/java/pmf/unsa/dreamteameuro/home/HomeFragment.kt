@@ -9,7 +9,6 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import pmf.unsa.dreamteameuro.R
 import pmf.unsa.dreamteameuro.databinding.FragmentHomeBinding
 
@@ -51,6 +50,10 @@ class HomeFragment : Fragment(), AdapterView.OnItemSelectedListener{
 
         binding.next.setOnClickListener { view : View ->
             view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToListFragment(teamName, teamId))
+        }
+
+        binding.next2.setOnClickListener { view : View ->
+            view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToIdealTeam())
         }
 
         val spinner: Spinner = binding.spinner

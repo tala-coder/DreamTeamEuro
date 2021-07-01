@@ -3,6 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="select_team">PICK A TEAM</string>
+    <string name="ideal_team">MY IDEAL TEAM</string>
     <string name="squad_btn">VIEW SQUAD</string>
     <string-array name="teams">
         <item>Austria</item>
@@ -30,4 +31,11 @@
         <item>Ukraine</item>
         <item>Wales</item>
     </string-array>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Moj idealni tim</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_ideal_team">MY IDEAL TEAM</string>
+
 </resources>
