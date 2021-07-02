@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/aboutPlayer">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/splashFragment"
@@ -40,8 +40,7 @@
         android:id="@+id/listFragment"
         android:name="pmf.unsa.dreamteameuro.list.ListFragment"
         android:label="Euro 2020"
-        tools:layout="@layout/fragment_list"
-        >
+        tools:layout="@layout/fragment_list">
         <argument
             android:name="teamName"
             app:argType="string" />
@@ -62,10 +61,34 @@
         android:id="@+id/aboutPlayer"
         android:name="pmf.unsa.dreamteameuro.players.AboutPlayer"
         android:label="about_player_fragment"
-        tools:layout="@layout/about_player_fragment" >
+        tools:layout="@layout/about_player_fragment">
         <action
             android:id="@+id/action_aboutPlayer_to_idealTeam"
             app:destination="@id/idealTeam" />
+        <argument
+            android:name="playerName"
+            app:argType="string"
+             />
+        <argument
+            android:name="playerNumber"
+            app:argType="integer"
+             />
+        <argument
+            android:name="playerValue"
+            app:argType="integer"
+             />
+        <argument
+            android:name="playerPosition"
+            app:argType="string"
+             />
+        <argument
+            android:name="playerHeight"
+            app:argType="integer"
+             />
+        <argument
+            android:name="playerDate"
+            app:argType="integer"
+             />
     </fragment>
 
 
