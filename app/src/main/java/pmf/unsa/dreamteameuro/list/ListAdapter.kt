@@ -11,11 +11,21 @@ import pmf.unsa.dreamteameuro.R
 import pmf.unsa.dreamteameuro.list.network.Player
 
 
-class ListAdapter: RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
+class ListAdapter(private val listener: OnItemClickedListener): RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
 
     private var myList = emptyList<Player>()
 
-    inner class ListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
+    inner class ListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener {
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val position = adapterPosition
+            if(position != RecyclerView.NO_POSITION)
+                listener.onItemClick(position)
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         return ListViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.player_layout, parent, false))
@@ -37,7 +47,9 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
     }
 
 
-
+    interface OnItemClickedListener {
+        fun onItemClick(position: Int)
+    }
 
 
 }

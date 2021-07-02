@@ -6,31 +6,45 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_list.*
 import pmf.unsa.dreamteameuro.R
 import pmf.unsa.dreamteameuro.databinding.FragmentListBinding
+import pmf.unsa.dreamteameuro.list.network.Player
 import pmf.unsa.dreamteameuro.list.repository.Repository
 
 
-class ListFragment : Fragment(){
+class ListFragment : Fragment(), ListAdapter.OnItemClickedListener{
 
     private lateinit var viewModel: ListViewModel
     private lateinit var args: ListFragmentArgs
     private lateinit var myRecView: RecyclerView
-    private val ListAdapter by lazy { ListAdapter() }
+    private lateinit var myList: List<Player>
+    private val ListAdapter by lazy { ListAdapter(this) }
 
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         args = ListFragmentArgs.fromBundle(requireArguments())
+        val repository = Repository()
+        val viewModelFactory = ListViewModelFactory(repository)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(ListViewModel::class.java)
+        viewModel.getPlayers(args.teamId)
+        viewModel.myResponse.observe(this, Observer { response ->
+            if (response.isSuccessful) {
+                response.body()?.nationalPlayers?.let { ListAdapter.setData(it) }
+                myList = response.body()?.nationalPlayers!!
+            } else {
+                Toast.makeText(context, response.code(), Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
 
-    override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val binding = FragmentListBinding.inflate(inflater)
         binding.next.text = args.teamName
@@ -46,24 +60,16 @@ class ListFragment : Fragment(){
         setHasOptionsMenu(true)
         setRecyclerView()
 
-        val repository = Repository()
-        val viewModelFactory = ListViewModelFactory(repository)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(ListViewModel::class.java)
-        viewModel.getPlayers(args.teamId)
-        viewModel.myResponse.observe(viewLifecycleOwner, Observer { response ->
-            if (response.isSuccessful) {
-                response.body()?.nationalPlayers?.let { ListAdapter.setData(it) }
-            } else {
-                Toast.makeText(context, response.code(), Toast.LENGTH_SHORT).show()
-            }
-        })
-
         return binding.root
     }
+
+
+
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.options_menu, menu)
     }
+
 
     private fun setRecyclerView() {
         myRecView.adapter = ListAdapter
@@ -74,5 +80,23 @@ class ListFragment : Fragment(){
     }
 
 
-    
+    override fun onItemClick(position: Int) {
+        val item = myList[position]
+        val playerName = item.player.name
+        val playerNumber = item.player.shirtNumber
+        val playerValue = item.player.proposedMarketValue
+        val playerPosition = item.player.position
+        val playerHeight = item.player.height
+        val playerDate = item.player.dateOfBirthTimestamp
+        findNavController().navigate(ListFragmentDirections.actionListFragmentToAboutPlayer(
+            playerName,
+            playerNumber,
+            playerValue,
+            playerPosition,
+            playerHeight,
+            playerDate
+        ))
+    }
+
+
 }
