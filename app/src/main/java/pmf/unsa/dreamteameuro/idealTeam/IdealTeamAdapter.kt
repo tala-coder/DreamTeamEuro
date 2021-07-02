@@ -24,6 +24,7 @@ class IdealTeamAdapter: RecyclerView.Adapter<IdealTeamAdapter.MyViewHolder>() {
 
         override fun getItemCount(): Int {
             return playerList.size
+            //dsds
         }
 
         override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
