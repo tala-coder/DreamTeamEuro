@@ -24,4 +24,22 @@ class PlayerViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
+    fun deletaAllPlayers(player: Player){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.addPlayer(player)
+        }
+    }
+
+    fun deletePlayer(player: Player){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deletePlayer(player)
+        }
+    }
+
+    fun deleteAllPlayers(){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteAllPlayers()
+        }
+    }
+
 }

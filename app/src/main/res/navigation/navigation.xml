@@ -61,8 +61,8 @@
     <fragment
         android:id="@+id/aboutPlayer"
         android:name="pmf.unsa.dreamteameuro.players.AboutPlayer"
-        android:label="about_player_fragment"
-        tools:layout="@layout/about_player_fragment" >
+        android:label="About player"
+        tools:layout="@layout/about_player_fragment">
         <action
             android:id="@+id/action_aboutPlayer_to_idealTeam"
             app:destination="@id/idealTeam" />
