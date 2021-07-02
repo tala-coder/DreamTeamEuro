@@ -6,25 +6,49 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
+import kotlinx.android.synthetic.main.about_player_fragment.*
+import kotlinx.android.synthetic.main.about_player_fragment.view.*
 import pmf.unsa.dreamteameuro.R
+import pmf.unsa.dreamteameuro.data.Player
+import pmf.unsa.dreamteameuro.data.PlayerViewModel
 
 class AboutPlayer : Fragment() {
 
-    companion object {
-        fun newInstance() = AboutPlayer()
-    }
 
-    private lateinit var viewModel: AboutPlayerViewModel
+    private lateinit var viewModel: PlayerViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.about_player_fragment, container, false)
+        val view = inflater.inflate(R.layout.about_player_fragment, container, false)
+        viewModel = ViewModelProvider(this).get(PlayerViewModel::class.java)
+
+        view.add_floatingActionButton.setOnClickListener{
+            insertPlayerToDatabase()
+        }
+
+        return view
     }
 
-//    override fun onActivityCreated(savedInstanceState: Bundle?) {
-//        super.onActivityCreated(savedInstanceState)
-//        viewModel = ViewModelProvider(this).get(AboutPlayerViewModel::class.java)
-//        // TODO: Use the ViewModel
-//    }
+    private fun insertPlayerToDatabase() {
+        // todo: promijeniti nazive
+        val t1 = t1.text.toString()
+        val t2 = t2.text.toString()
+        val t3 = t3.text.toString()
+//        val t4 = t4.text.toString()
 
+
+
+        try{
+            val player = Player(0, t1, t2, Integer.parseInt(t3))
+            viewModel.addPlayer(player)
+            Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()
+            findNavController().navigate(R.id.action_aboutPlayer_to_idealTeam)
+        }catch(excepiton: Exception){
+            Toast.makeText(requireContext(), "Something wrong...", Toast.LENGTH_LONG).show()
+        }
+
+
+    }
 }

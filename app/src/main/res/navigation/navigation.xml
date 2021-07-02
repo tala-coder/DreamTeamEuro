@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/aboutPlayer">
 
     <fragment
         android:id="@+id/splashFragment"
@@ -62,7 +62,11 @@
         android:id="@+id/aboutPlayer"
         android:name="pmf.unsa.dreamteameuro.players.AboutPlayer"
         android:label="about_player_fragment"
-        tools:layout="@layout/about_player_fragment" />
+        tools:layout="@layout/about_player_fragment" >
+        <action
+            android:id="@+id/action_aboutPlayer_to_idealTeam"
+            app:destination="@id/idealTeam" />
+    </fragment>
 
 
 </navigation>

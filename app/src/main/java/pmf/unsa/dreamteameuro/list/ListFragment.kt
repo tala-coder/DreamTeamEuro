@@ -36,6 +36,13 @@ class ListFragment : Fragment(){
         binding.next.text = args.teamName
         myRecView = binding.myRecView
 
+        myRecView.addItemDecoration(
+            DividerItemDecoration(
+                myRecView.context,
+                DividerItemDecoration.VERTICAL
+            )
+        )
+
         setHasOptionsMenu(true)
         setRecyclerView()
 

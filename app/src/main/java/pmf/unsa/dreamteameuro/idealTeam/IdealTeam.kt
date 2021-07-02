@@ -1,33 +1,50 @@
 package pmf.unsa.dreamteameuro.idealTeam
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.ideal_team_fragment.view.*
 import pmf.unsa.dreamteameuro.R
+import pmf.unsa.dreamteameuro.data.PlayerViewModel
+
 
 class IdealTeam : Fragment() {
 
-    companion object {
-        fun newInstance() = IdealTeam()
+    private lateinit var viewModel: PlayerViewModel
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.ideal_team_fragment, container, false)
+
+        // Recyclerview
+        val adapter = IdealTeamAdapter()
+        val recyclerView = view.recyclerview_idealteam
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.addItemDecoration(
+            DividerItemDecoration(
+                recyclerView.context,
+                DividerItemDecoration.VERTICAL
+            )
+        )
+
+        //  PlayerViewModel
+        viewModel = ViewModelProvider(this).get(PlayerViewModel::class.java)
+        viewModel.readAllData.observe(viewLifecycleOwner, Observer { player ->
+            adapter.setData(player)
+        })
+
+
+        return view
     }
-
-    private lateinit var viewModel: IdealTeamViewModel
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.ideal_team_fragment, container, false)
-
-
-    }
-
-//    override fun onActivityCreated(savedInstanceState: Bundle?) {
-//        super.onActivityCreated(savedInstanceState)
-//        viewModel = ViewModelProvider(this).get(IdealTeamViewModel::class.java)
-//
-//
-//    }
 
 }
