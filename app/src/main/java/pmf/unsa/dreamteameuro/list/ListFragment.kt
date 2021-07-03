@@ -88,6 +88,20 @@ class ListFragment : Fragment(), ListAdapter.OnItemClickedListener{
         myRecView.addItemDecoration(dividerItemDecoration)
     }
 
+    fun sortList(param: Int) {
+        if(param == 2) {
+            val priceComparator =
+                Comparator { p1: Player, p2: Player -> p1.player.proposedMarketValue - p2.player.proposedMarketValue }
+            myList = myList.sortedWith(priceComparator)
+            ListAdapter.setData(myList)
+        }
+        else {
+            val priceComparator =
+                Comparator { p1: Player, p2: Player -> p2.player.proposedMarketValue - p1.player.proposedMarketValue }
+            myList = myList.sortedWith(priceComparator)
+            ListAdapter.setData(myList)
+        }
+    }
 
     override fun onItemClick(position: Int) {
         val item = myList[position]
@@ -105,21 +119,6 @@ class ListFragment : Fragment(), ListAdapter.OnItemClickedListener{
             playerHeight,
             playerDate
         ))
-    }
-
-    fun sortList(param: Int) {
-        if(param == 2) {
-            val priceComparator =
-                Comparator { p1: Player, p2: Player -> p1.player.proposedMarketValue - p2.player.proposedMarketValue }
-            myList = myList.sortedWith(priceComparator)
-            ListAdapter.setData(myList)
-        }
-        else {
-            val priceComparator =
-                Comparator { p1: Player, p2: Player -> p2.player.proposedMarketValue - p1.player.proposedMarketValue }
-            myList = myList.sortedWith(priceComparator)
-            ListAdapter.setData(myList)
-        }
     }
 
 }

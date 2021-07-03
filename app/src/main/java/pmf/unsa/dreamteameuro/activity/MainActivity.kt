@@ -1,4 +1,4 @@
-package pmf.unsa.dreamteameuro
+package pmf.unsa.dreamteameuro.activity
 
 import android.os.Bundle
 import android.view.View
@@ -9,6 +9,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import pmf.unsa.dreamteameuro.R
 
 class MainActivity : AppCompatActivity() {
 

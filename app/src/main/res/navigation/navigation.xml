@@ -60,35 +60,29 @@
     <fragment
         android:id="@+id/aboutPlayer"
         android:name="pmf.unsa.dreamteameuro.players.AboutPlayer"
-        android:label="about_player_fragment"
+        android:label="About player"
         tools:layout="@layout/about_player_fragment">
         <action
             android:id="@+id/action_aboutPlayer_to_idealTeam"
             app:destination="@id/idealTeam" />
         <argument
             android:name="playerName"
-            app:argType="string"
-             />
+            app:argType="string" />
         <argument
             android:name="playerNumber"
-            app:argType="integer"
-             />
+            app:argType="integer" />
         <argument
             android:name="playerValue"
-            app:argType="integer"
-             />
+            app:argType="integer" />
         <argument
             android:name="playerPosition"
-            app:argType="string"
-             />
+            app:argType="string" />
         <argument
             android:name="playerHeight"
-            app:argType="integer"
-             />
+            app:argType="integer" />
         <argument
             android:name="playerDate"
-            app:argType="integer"
-             />
+            app:argType="integer" />
     </fragment>
 
 

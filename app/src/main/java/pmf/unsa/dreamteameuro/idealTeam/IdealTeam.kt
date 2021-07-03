@@ -1,6 +1,7 @@
 package pmf.unsa.dreamteameuro.idealTeam
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.ideal_team_fragment.view.*
 import pmf.unsa.dreamteameuro.R
 import pmf.unsa.dreamteameuro.data.PlayerViewModel
+import pmf.unsa.dreamteameuro.list.ListAdapter
 
 
 class IdealTeam : Fragment() {
@@ -22,10 +24,10 @@ class IdealTeam : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         val view = inflater.inflate(R.layout.ideal_team_fragment, container, false)
 
-        // Recyclerview
+
         val adapter = IdealTeamAdapter()
         val recyclerView = view.recyclerview_idealteam
         recyclerView.adapter = adapter
@@ -37,7 +39,7 @@ class IdealTeam : Fragment() {
             )
         )
 
-        //  PlayerViewModel
+
         viewModel = ViewModelProvider(this).get(PlayerViewModel::class.java)
         viewModel.readAllData.observe(viewLifecycleOwner, Observer { player ->
             adapter.setData(player)
@@ -56,7 +58,22 @@ class IdealTeam : Fragment() {
         if(item.itemId == R.id.menu_delete){
             deleteAllPlayers()
         }
+        else if(item.itemId == R.id.menu_share){
+            shareSuccess()
+        }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun getShareIntent() : Intent {
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.setType("text/plain")
+            .putExtra(Intent.EXTRA_TEXT, getString(R.string.ideal_team_share))
+        return shareIntent
+    }
+
+
+    private fun shareSuccess() {
+        startActivity(getShareIntent())
     }
 
     private fun deleteAllPlayers() {
