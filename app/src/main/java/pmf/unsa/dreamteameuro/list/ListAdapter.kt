@@ -33,7 +33,7 @@ class ListAdapter(private val listener: OnItemClickedListener): RecyclerView.Ada
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         holder.itemView.playerName.text = myList[position].player.name
-        holder.itemView.playerPrice.text = "$" + myList[position].player.proposedMarketValue.toString()
+        holder.itemView.playerPrice.text = formatPrice(myList[position].player.proposedMarketValue)
         holder.itemView.shirt.text = myList[position].player.shirtNumber.toString()
     }
 
@@ -44,6 +44,31 @@ class ListAdapter(private val listener: OnItemClickedListener): RecyclerView.Ada
     fun setData(newList: List<Player>) {
         myList = newList
         notifyDataSetChanged()
+    }
+
+
+    fun formatPrice(price: Int): String {
+        var formated = "$"
+        var pom = price
+        var i = 0
+        if(pom < 1000000) {
+            val str = price.toString()
+            if(str.length == 6)
+                formated += str.substring(0,2) + " k"
+            else if(str.length == 5)
+                formated += str.substring(0,1) + " k"
+            else
+                formated += str[0] + " k"
+        }
+        while(pom >= 1000000) {
+            val str = price.toString()
+            pom /= 10
+            formated += str[i]
+            i += 1
+            if(pom < 1000000)
+                formated += "." + str[i] + " m"
+        }
+        return formated
     }
 
 

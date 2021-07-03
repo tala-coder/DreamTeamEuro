@@ -34,7 +34,7 @@ class AboutPlayer : Fragment() {
         view.agePly.text = args.playerDate.toString()
         view.positionPly.text = args.playerPosition
         view.heightPly.text = args.playerHeight.toString()
-        view.valuePly.text = args.playerValue.toString()
+        view.valuePly.text = formatPrice(args.playerValue)
         view.numberPly.text = args.playerNumber.toString()
 
         view.add_floatingActionButton.setOnClickListener{
@@ -42,6 +42,30 @@ class AboutPlayer : Fragment() {
         }
 
         return view
+    }
+
+    fun formatPrice(price: Int): String {
+        var formated = "$"
+        var pom = price
+        var i = 0
+        if(pom < 1000000) {
+            val str = price.toString()
+            if(str.length == 6)
+                formated += str.substring(0,2) + " k"
+            else if(str.length == 5)
+                formated += str.substring(0,1) + " k"
+            else
+                formated += str[0] + " k"
+        }
+        while(pom >= 1000000) {
+            val str = price.toString()
+            pom /= 10
+            formated += str[i]
+            i += 1
+            if(pom < 1000000)
+                formated += "." + str[i] + " m"
+        }
+        return formated
     }
 
     private fun insertPlayerToDatabase() {

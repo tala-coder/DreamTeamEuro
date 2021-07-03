@@ -3,8 +3,8 @@
 
     <item
         android:id="@+id/options1"
-        android:title= "options1" />
+        android:title="price ↑" />
     <item
         android:id="@+id/options2"
-        android:title= "options2" />
+        android:title="price ↓" />
 </menu>

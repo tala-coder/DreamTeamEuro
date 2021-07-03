@@ -12,7 +12,7 @@ import androidx.navigation.findNavController
 import pmf.unsa.dreamteameuro.R
 import pmf.unsa.dreamteameuro.databinding.FragmentHomeBinding
 
-val map = mapOf(
+val map = hashMapOf(
     "Italy" to 4707,
     "Belgium" to 4717,
     "Spain" to 4698,

@@ -70,6 +70,15 @@ class ListFragment : Fragment(), ListAdapter.OnItemClickedListener{
         inflater.inflate(R.menu.options_menu, menu)
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.options2){
+            sortList(2)
+        }
+        else if(item.itemId == R.id.options1){
+            sortList(1)
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
     private fun setRecyclerView() {
         myRecView.adapter = ListAdapter
@@ -98,5 +107,19 @@ class ListFragment : Fragment(), ListAdapter.OnItemClickedListener{
         ))
     }
 
+    fun sortList(param: Int) {
+        if(param == 2) {
+            val priceComparator =
+                Comparator { p1: Player, p2: Player -> p1.player.proposedMarketValue - p2.player.proposedMarketValue }
+            myList = myList.sortedWith(priceComparator)
+            ListAdapter.setData(myList)
+        }
+        else {
+            val priceComparator =
+                Comparator { p1: Player, p2: Player -> p2.player.proposedMarketValue - p1.player.proposedMarketValue }
+            myList = myList.sortedWith(priceComparator)
+            ListAdapter.setData(myList)
+        }
+    }
 
 }
