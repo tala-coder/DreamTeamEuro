@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.recyclerview_player_layout_database.view.*
 import pmf.unsa.dreamteameuro.R
 import pmf.unsa.dreamteameuro.data.Player
+import pmf.unsa.dreamteameuro.formats.MyFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -31,22 +32,9 @@ class IdealTeamAdapter: RecyclerView.Adapter<IdealTeamAdapter.MyViewHolder>() {
             val currentItem = playerList[position]
             holder.itemView.number.text = currentItem.id.toString()
             holder.itemView.playerName.text = currentItem.name
-
-//            holder.itemView.age.text = currentItem.age.toString()
-            holder.itemView.age.text = formatDate(currentItem.age.toLong())
+            holder.itemView.age.text = MyFormat.formatDate(currentItem.age.toLong())
 
         }
-
-// https://stackoverflow.com/questions/47250263/kotlin-convert-timestamp-to-datetime
-    private fun formatDate(epoc: Long): String? {
-        try {
-            val sdf = SimpleDateFormat("dd/MM/yyyy")
-            val netDate = Date(epoc*1000)
-            return sdf.format(netDate)
-        } catch (e: Exception) {
-            return e.toString()
-        }
-    }
 
         fun setData(player: List<Player>){
             this.playerList = player

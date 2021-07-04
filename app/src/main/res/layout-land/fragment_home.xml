@@ -14,7 +14,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:backgroundTint="#FFFFFF"
+            android:backgroundTint="#A563CDDA"
             android:fillViewport="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content">
 
 
-            <!--    <Button
+                <!--    <Button
                     android:id="@+id/next2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -47,42 +47,45 @@
                     android:id="@+id/next"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="164dp"
                     android:backgroundTint="@android:color/holo_orange_light"
                     android:text="@string/squad_btn"
                     android:textSize="24sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.767" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <Spinner
                     android:id="@+id/spinner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
                     android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="164dp"
-                    android:backgroundTint="#8CD9D2"
+                    android:layout_marginBottom="32dp"
+                    android:background="#AC2E909D"
+                    android:backgroundTintMode="add"
                     android:foregroundTint="#009688"
                     android:gravity="center"
+                    android:padding="10dp"
                     android:spinnerMode="dialog"
                     app:layout_constraintBottom_toTopOf="@+id/next"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
 
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
                     android:fontFamily="@font/baloo"
                     android:text="@string/select_team"
                     android:textColor="#F6F4F4"
-                    android:textSize="30sp"
-                    app:layout_constraintBottom_toTopOf="@+id/spinner"
+                    android:textSize="48sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
