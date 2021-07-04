@@ -4,7 +4,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import pmf.unsa.dreamteameuro.list.network.PlayersList
 import pmf.unsa.dreamteameuro.list.network.PlayersListX
 import pmf.unsa.dreamteameuro.list.repository.Repository
 import retrofit2.Response

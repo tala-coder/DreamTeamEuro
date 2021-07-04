@@ -50,6 +50,7 @@
         <action
             android:id="@+id/action_listFragment_to_aboutPlayer"
             app:destination="@id/aboutPlayer"
+            app:enterAnim="@android:anim/slide_in_left"
             app:popUpTo="@id/listFragment" />
     </fragment>
     <fragment
@@ -64,7 +65,9 @@
         tools:layout="@layout/about_player_fragment">
         <action
             android:id="@+id/action_aboutPlayer_to_idealTeam"
-            app:destination="@id/idealTeam" />
+            app:destination="@id/idealTeam"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/listFragment" />
         <argument
             android:name="playerName"
             app:argType="string" />

@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.homeFragment, R.id.idealTeam, R.id.splashFragment
+                R.id.homeFragment,  R.id.splashFragment //, R.id.idealTeam,
             )
         )
 

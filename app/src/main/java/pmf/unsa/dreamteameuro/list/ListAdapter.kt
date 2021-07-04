@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.player_layout.view.*
-import org.json.JSONObject
 import pmf.unsa.dreamteameuro.R
 import pmf.unsa.dreamteameuro.list.network.Player
 

@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.ideal_team_fragment.view.*
 import pmf.unsa.dreamteameuro.R
 import pmf.unsa.dreamteameuro.data.PlayerViewModel
-import pmf.unsa.dreamteameuro.list.ListAdapter
 
 
 class IdealTeam : Fragment() {

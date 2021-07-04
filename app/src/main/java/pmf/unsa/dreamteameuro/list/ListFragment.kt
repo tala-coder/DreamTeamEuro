@@ -1,6 +1,5 @@
 package pmf.unsa.dreamteameuro.list
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -10,7 +9,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.fragment_list.*
 import pmf.unsa.dreamteameuro.R
 import pmf.unsa.dreamteameuro.databinding.FragmentListBinding
 import pmf.unsa.dreamteameuro.list.network.Player

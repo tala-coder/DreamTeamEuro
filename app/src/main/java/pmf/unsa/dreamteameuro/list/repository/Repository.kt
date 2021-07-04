@@ -1,6 +1,6 @@
 package pmf.unsa.dreamteameuro.list.repository
 
-import pmf.unsa.dreamteameuro.list.network.PlayersList
+
 import pmf.unsa.dreamteameuro.list.network.PlayersListX
 import pmf.unsa.dreamteameuro.list.network.RetrofitInstance
 import retrofit2.Response

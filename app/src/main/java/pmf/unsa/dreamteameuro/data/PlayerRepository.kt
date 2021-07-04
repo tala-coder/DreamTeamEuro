@@ -10,9 +10,7 @@ class PlayerRepository(private val playerDAO: PlayerDAO) {
     suspend fun addPlayer(player: Player){
         playerDAO.addPlayer(player)
     }
-    suspend fun deletePlayer(player: Player){
-        playerDAO.deletePlayer(player)
-    }
+
 
     suspend fun deleteAllPlayers(){
         playerDAO.deleteAllPlayers()

@@ -52,9 +52,9 @@ class HomeFragment : Fragment(), AdapterView.OnItemSelectedListener{
             view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToListFragment(teamName, teamId))
         }
 
-        binding.next2.setOnClickListener { view : View ->
+        /*binding.next2.setOnClickListener { view : View ->
             view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToIdealTeam())
-        }
+        }*/
 
         val spinner: Spinner = binding.spinner
         ArrayAdapter.createFromResource(
@@ -81,4 +81,5 @@ class HomeFragment : Fragment(), AdapterView.OnItemSelectedListener{
         teamName = "Austria"
         teamId = 4718
     }
+
 }
