@@ -38,14 +38,14 @@ The base room is part of the components of android architecture. The room consis
    2.Entity<br>
    3.DAO<br>
 
-   Database<br><br>
+   Database<br>
 In order to create a database in Kotlin, we need to include dependencies, create a class and mark the basic data (@Database) and also give the names of the tables that we will use in the project.
 
 
-   Entity<br><br>
+   Entity<br>
 A data class that represents a class of data in a database. It is marked with the keywords @Entitiy. The fields in the class correspond to the columns in the table. It consists of at least one field that must be the primary key.
 
-   DAO<br><br>
+   DAO<br>
 Within DAO it contains methods that use db operations.
 We can use 4 notes: (Insert, update, delete, query) 
 
