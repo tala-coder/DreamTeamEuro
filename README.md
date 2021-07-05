@@ -33,7 +33,7 @@ Data <br><br>
 <img src="https://user-images.githubusercontent.com/53277964/124466898-6a690600-dd97-11eb-9f19-bc49a88d374e.jpg" width="148">
 <br><br>
 In this project we use the Room base.
-The base room is part of the components of android architecture. The room consists of 3 basic components
+The base room is part of the components of android architecture. The room consists of 3 basic components.<br>
    1.Database<br>
    2.Entity<br>
    3.DAO<br>
