@@ -32,6 +32,22 @@ Data <br><br>
 <img src="https://user-images.githubusercontent.com/53277964/124466836-545b4580-dd97-11eb-9340-3d88040f7cee.jpg" width="148">
 <img src="https://user-images.githubusercontent.com/53277964/124466898-6a690600-dd97-11eb-9f19-bc49a88d374e.jpg" width="148">
 
+In this project we use the Room base.
+The base room is part of the components of android architecture. The room consists of 3 basic components
+   1.Database
+   2.Entity
+   3.DAO
+
+    - Database
+In order to create a database in Kotlin, we need to include dependencies, create a class and mark the basic data (@Database) and also give the names of the tables that we will use in the project.
+
+
+    - Entity
+A data class that represents a class of data in a database. It is marked with the keywords @Entitiy. The fields in the class correspond to the columns in the table. It consists of at least one field that must be the primary key.
+
+    - DAO
+Within DAO it contains methods that use db operations.
+We can use 4 notes: (Insert, update, delete, query) 
 
 ## Tech used
 
@@ -53,22 +69,7 @@ Data <br><br>
   </li>
 </ul>
 
-In this project we use the Room base.
-The base room is part of the components of android architecture. The room consists of 3 basic components
-   1.Database
-   2.Entity
-   3.DAO
 
-    - Database
-In order to create a database in Kotlin, we need to include dependencies, create a class and mark the basic data (@Database) and also give the names of the tables that we will use in the project.
-
-
-    - Entity
-A data class that represents a class of data in a database. It is marked with the keywords @Entitiy. The fields in the class correspond to the columns in the table. It consists of at least one field that must be the primary key.
-
-    - DAO
-Within DAO it contains methods that use db operations.
-We can use 4 notes: (Insert, update, delete, query) 
 
 
 ## How to install
