@@ -52,3 +52,8 @@ Data <br><br>
     <a href="https://rapidapi.com/apidojo/api/sofascore/">Sofascore Rapid API</a>
   </li>
 </ul>
+
+
+## How to install
+
+If you have android studio installed on your computer, download the project from <a href="https://github.com/tala-coder/DreamTeamEuro">this</a> repository, open it in adroid studio, connect your android phone to the computer via usb cable, in developer options on your pohne enable usb debugging, in the android studio AVD manager select your device and click run. If you don't have android studio, follow <a href="https://www.techsupportofmn.com/how-to-use-your-computer-to-install-apps-on-your-android-device">these instructions</a>.
