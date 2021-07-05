@@ -1,5 +1,4 @@
 # DreamTeamEuro
-<br><br>
 
 Euro 2020 Fantasy android application
 
