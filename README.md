@@ -35,4 +35,20 @@ Data <br><br>
 
 ## Tech used
 
-<a href="https://kotlinlang.org/">Kotlin</a>
+<ul>
+  <li>
+    <a href="https://kotlinlang.org/">Kotlin</a>
+  </li>
+  <li>
+    <a href="https://plugins.jetbrains.com/plugin/9960-json-to-kotlin-class-jsontokotlinclass-">JSON to Kotlin Data Class</a>
+  </li>
+  <li>
+    <a href="https://square.github.io/retrofit/">Retrofit</a>
+  </li>
+  <li>
+    <a href="https://developer.android.com/jetpack/androidx/releases/room">Room database</a>
+  </li>
+  <li>
+    <a href="https://rapidapi.com/apidojo/api/sofascore/">Sofascore Rapid API</a>
+  </li>
+</ul>
