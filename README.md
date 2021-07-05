@@ -2,6 +2,9 @@
 
 Euro 2020 Fantasy android application
 
+## Specifications
+https://hackmd.io/@elmedins/HJlxLts5u
+
 ## Description
 
 Splash <br><br>
