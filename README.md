@@ -74,4 +74,6 @@ We can use 4 notes: (Insert, update, delete, query)
 
 ## How to install
 
-If you have android studio installed on your computer, download the project from <a href="https://github.com/tala-coder/DreamTeamEuro">this</a> repository, open it in adroid studio, connect your android phone to the computer via usb cable, in developer options on your pohne enable usb debugging, in the android studio AVD manager select your device and click run. If you don't have android studio, follow <a href="https://www.techsupportofmn.com/how-to-use-your-computer-to-install-apps-on-your-android-device">these instructions</a>.
+If you have android studio installed on your computer, download the project from <a href="https://github.com/tala-coder/DreamTeamEuro">this</a> repository, open it in adroid studio, connect your android phone to the computer via usb cable, in developer options on your pohne enable usb debugging, in the android studio AVD manager select your device and click run. If you don't have android studio, follow <a href="https://www.techsupportofmn.com/how-to-use-your-computer-to-install-apps-on-your-android-device">these instructions</a>.<br>
+If your on mobile phone follow this <a href="https://easyupload.io/mxp3m5">link</a>
+
