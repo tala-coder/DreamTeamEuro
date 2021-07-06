@@ -45,12 +45,14 @@ A data class that represents a class of data in a database. It is marked with th
 
    DAO<br>
 Within DAO it contains methods that use db operations.
-We can use 4 notes: (Insert, update, delete, query) <br>
+We can use 4 notes: (Insert, update, delete, query) <br><br>
 <img src="https://user-images.githubusercontent.com/53277964/124466683-237b1080-dd97-11eb-9094-cdfb9aac5bc4.jpg" width="148">
 <img src="https://user-images.githubusercontent.com/53277964/124466789-43aacf80-dd97-11eb-97b9-6206371ed0ef.jpg" width="148">
 <img src="https://user-images.githubusercontent.com/53277964/124466836-545b4580-dd97-11eb-9340-3d88040f7cee.jpg" width="148">
 <img src="https://user-images.githubusercontent.com/53277964/124466898-6a690600-dd97-11eb-9f19-bc49a88d374e.jpg" width="148">
 <br><br>
+When we save a player, it takes us to the next fragment where the players selected by the user are housed.
+In the app bar we have the option to share or delete the list of added players.
 
 
 ## Tech used
