@@ -73,6 +73,9 @@ In the app bar we have the option to share or delete the list of added players.
   <li>
     <a href="https://rapidapi.com/apidojo/api/sofascore/">Sofascore Rapid API</a>
   </li>
+   <li>
+    <a href="https://github.com/square/retrofit/tree/master/retrofit-converters/gson">GSON Converter</a>
+  </li>
 </ul>
 
 
@@ -81,5 +84,5 @@ In the app bar we have the option to share or delete the list of added players.
 ## How to install
 
 If you have android studio installed on your computer, download the project from <a href="https://github.com/tala-coder/DreamTeamEuro">this</a> repository, open it in adroid studio, connect your android phone to the computer via usb cable, in developer options on your pohne enable usb debugging, in the android studio AVD manager select your device and click run. If you don't have android studio, follow <a href="https://www.techsupportofmn.com/how-to-use-your-computer-to-install-apps-on-your-android-device">these instructions</a>.<br>
-If your on mobile phone follow this <a href="https://easyupload.io/mxp3m5">link</a>
+If you're on your mobile phone follow this <a href="https://easyupload.io/mxp3m5">link</a>
 
