@@ -30,11 +30,6 @@ This fragment is used to display more data for the selected player. The fragmen
 <img src="https://user-images.githubusercontent.com/53277964/124466514-034b5180-dd97-11eb-9f55-ac591433d1e8.jpg" width="348">
 
 Data <br><br>
-<img src="https://user-images.githubusercontent.com/53277964/124466683-237b1080-dd97-11eb-9094-cdfb9aac5bc4.jpg" width="148">
-<img src="https://user-images.githubusercontent.com/53277964/124466789-43aacf80-dd97-11eb-97b9-6206371ed0ef.jpg" width="148">
-<img src="https://user-images.githubusercontent.com/53277964/124466836-545b4580-dd97-11eb-9340-3d88040f7cee.jpg" width="148">
-<img src="https://user-images.githubusercontent.com/53277964/124466898-6a690600-dd97-11eb-9f19-bc49a88d374e.jpg" width="148">
-<br><br>
 In this project we use the Room base.
 The base room is part of the components of android architecture. The room consists of 3 basic components.<br>
    1.Database<br>
@@ -50,7 +45,13 @@ A data class that represents a class of data in a database. It is marked with th
 
    DAO<br>
 Within DAO it contains methods that use db operations.
-We can use 4 notes: (Insert, update, delete, query) 
+We can use 4 notes: (Insert, update, delete, query) <br>
+<img src="https://user-images.githubusercontent.com/53277964/124466683-237b1080-dd97-11eb-9094-cdfb9aac5bc4.jpg" width="148">
+<img src="https://user-images.githubusercontent.com/53277964/124466789-43aacf80-dd97-11eb-97b9-6206371ed0ef.jpg" width="148">
+<img src="https://user-images.githubusercontent.com/53277964/124466836-545b4580-dd97-11eb-9340-3d88040f7cee.jpg" width="148">
+<img src="https://user-images.githubusercontent.com/53277964/124466898-6a690600-dd97-11eb-9f19-bc49a88d374e.jpg" width="148">
+<br><br>
+
 
 ## Tech used
 
